@@ -34,7 +34,7 @@ object HelloIndigo extends IndigoSandbox[Unit, Model] {
     )
 
   def updateModel(
-      context: indigo.FrameContext,
+      context: indigo.FrameContext[Unit],
       model: Model
   ): indigo.GlobalEvent => indigo.Outcome[Model] = {
     case MouseEvent.Click(x, y) =>
@@ -62,7 +62,7 @@ object HelloIndigo extends IndigoSandbox[Unit, Model] {
   }
 
   def present(
-      context: indigo.FrameContext,
+      context: indigo.FrameContext[Unit],
       model: Model
   ): indigo.SceneUpdateFragment =
     SceneUpdateFragment(
