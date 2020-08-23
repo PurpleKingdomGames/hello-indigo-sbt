@@ -1,4 +1,3 @@
-
 lazy val helloindigo =
   (project in file("."))
     .enablePlugins(ScalaJSPlugin, SbtIndigo)
@@ -17,12 +16,14 @@ lazy val helloindigo =
       showCursor := true,
       title := "Hello, Indigo! - Made with Indigo",
       gameAssetsDirectory := "assets",
+      windowStartWidth := 550,
+      windowStartHeight := 400,
       libraryDependencies ++= Seq(
-        "io.indigoengine" %%% "indigo-json-circe" % "0.2.0",
-        "io.indigoengine" %%% "indigo"            % "0.2.0",
-        "io.indigoengine" %%% "indigo-extras"     % "0.2.0"
+        "io.indigoengine" %%% "indigo-json-circe" % "0.3.0",
+        "io.indigoengine" %%% "indigo"            % "0.3.0",
+        "io.indigoengine" %%% "indigo-extras"     % "0.3.0"
       )
     )
 
-addCommandAlias("buildGame", ";compile;fastOptJS;indigoBuildJS")
-addCommandAlias("publishGame", ";compile;fullOptJS;indigoPublishJS")
+addCommandAlias("buildGame", ";compile;fastOptJS;indigoBuild")
+addCommandAlias("runGame", ";compile;fastOptJS;indigoRun")
