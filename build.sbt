@@ -4,12 +4,12 @@ lazy val helloindigo =
     .settings( // Normal SBT settings
       name := "helloindigo",
       version := "0.0.1",
-      scalaVersion := "2.13.4",
+      scalaVersion := "3.0.0-RC2",
       organization := "helloindigo",
       libraryDependencies ++= Seq(
-        "com.lihaoyi"    %%% "utest"      % "0.7.4"  % "test"
+        "org.scalameta" %%% "munit" % "0.7.23" % Test
       ),
-      testFrameworks += new TestFramework("utest.runner.Framework")
+      testFrameworks += new TestFramework("munit.Framework")
     )
     .settings( // Indigo specific settings
       showCursor := true,
@@ -18,9 +18,9 @@ lazy val helloindigo =
       windowStartWidth := 550,
       windowStartHeight := 400,
       libraryDependencies ++= Seq(
-        "io.indigoengine" %%% "indigo-json-circe" % "0.6.0",
-        "io.indigoengine" %%% "indigo"            % "0.6.0",
-        "io.indigoengine" %%% "indigo-extras"     % "0.6.0"
+        "io.indigoengine" %%% "indigo-json-circe" % "0.7.0",
+        "io.indigoengine" %%% "indigo"            % "0.7.0",
+        "io.indigoengine" %%% "indigo-extras"     % "0.7.0"
       )
     )
 
