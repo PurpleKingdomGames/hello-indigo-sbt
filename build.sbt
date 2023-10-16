@@ -19,9 +19,9 @@ lazy val helloindigo =
           .withTitle("Hello, Indigo! - Made with Indigo")
           .withBackgroundColor("black"),
       libraryDependencies ++= Seq(
-        "io.indigoengine" %%% "indigo-json-circe" % "0.15.0",
-        "io.indigoengine" %%% "indigo"            % "0.15.0",
-        "io.indigoengine" %%% "indigo-extras"     % "0.15.0"
+        "io.indigoengine" %%% "indigo-json-circe" % "0.15.1",
+        "io.indigoengine" %%% "indigo"            % "0.15.1",
+        "io.indigoengine" %%% "indigo-extras"     % "0.15.1"
       )
     )
 
